@@ -1,6 +1,6 @@
 # A-Wing
 Sistema Web do LEDS Santa Teresa para estudos sobre o framework Angular.
-![A-Wing](https://vignette.wikia.nocookie.net/pt.starwars/images/c/cb/Awing1.jpg)
+![A-Wing](https://vignette.wikia.nocookie.net/pt.starwars/images/8/8d/A-wing_DICE.png/revision/latest?cb=20180116223039)
 
 ## Introdução
 Sistema Web com controle de acesso de usuários e cadastro de informações sobre Naves e Pilotos de Naves apresentados na franquia Star Wars.
