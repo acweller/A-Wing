@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Tempo de geração: 17/04/2019 às 17:28
+-- Tempo de geração: 18/04/2019 às 16:14
 -- Versão do servidor: 5.7.25-1
 -- Versão do PHP: 7.3.3-1
 
@@ -25,6 +25,34 @@ USE `db_awing`;
 -- --------------------------------------------------------
 
 --
+-- Estrutura para tabela `esquadrao`
+--
+
+DROP TABLE IF EXISTS `esquadrao`;
+CREATE TABLE `esquadrao` (
+  `cod_esquadrao` int(11) NOT NULL COMMENT 'Código auto-incrementado para os esquadões StarWars',
+  `nom_esquadrao` varchar(30) COLLATE utf8_unicode_ci NOT NULL COMMENT 'Armazena o nome dos esquadrões apresentadas no Star Wars',
+  `descricao` varchar(3000) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'Descrição dos esquadrões',
+  `datahora` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Data e Hora da última modificação'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Esquadrões conhecidos no universo Star Wars';
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `membro_esquadrao`
+--
+
+DROP TABLE IF EXISTS `membro_esquadrao`;
+CREATE TABLE `membro_esquadrao` (
+  `cod_personagem` int(11) NOT NULL COMMENT 'Chave do Personagem',
+  `cod_esquadrao` int(11) NOT NULL COMMENT 'Chave do Esquadrão',
+  `descricao` varchar(3000) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'Descrição sobre o personagem neste esquadrão',
+  `datahora` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Data e Hora da última modificação'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura para tabela `personagem`
 --
 
@@ -32,6 +60,7 @@ DROP TABLE IF EXISTS `personagem`;
 CREATE TABLE `personagem` (
   `cod_personagem` int(11) NOT NULL COMMENT 'Código do personagem',
   `nom_personagem` varchar(30) COLLATE utf8_unicode_ci NOT NULL COMMENT 'Nome do personagem Star Wars',
+  `imagem` varchar(300) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'Link para uma imagem do personagem',
   `descricao` varchar(3000) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'Descrição sobre o personagem',
   `datahora` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Data e Hora da última modificação'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Personagens da saga Star Wars';
@@ -47,6 +76,7 @@ CREATE TABLE `starship` (
   `cod_starship` int(11) NOT NULL COMMENT 'Código da nave',
   `cod_type` int(11) NOT NULL COMMENT 'Tipo de nave',
   `nom_starship` varchar(30) COLLATE utf8_unicode_ci NOT NULL COMMENT 'Nome da nave',
+  `imagem` varchar(300) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'Link para uma imagem da nave',
   `descricao` varchar(3000) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'Descrição da nave',
   `datahora` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Data e Hora de ultima atualização'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Naves utilizadas no universo Star Wars';
@@ -84,6 +114,21 @@ CREATE TABLE `starship_type` (
 --
 
 --
+-- Índices de tabela `esquadrao`
+--
+ALTER TABLE `esquadrao`
+  ADD PRIMARY KEY (`cod_esquadrao`);
+
+--
+-- Índices de tabela `membro_esquadrao`
+--
+ALTER TABLE `membro_esquadrao`
+  ADD KEY `cod_personagem` (`cod_personagem`),
+  ADD KEY `cod_esquadrao` (`cod_esquadrao`),
+  ADD KEY `cod_personagem_2` (`cod_personagem`),
+  ADD KEY `cod_esquadrao_2` (`cod_esquadrao`);
+
+--
 -- Índices de tabela `personagem`
 --
 ALTER TABLE `personagem`
@@ -114,6 +159,11 @@ ALTER TABLE `starship_type`
 --
 
 --
+-- AUTO_INCREMENT de tabela `esquadrao`
+--
+ALTER TABLE `esquadrao`
+  MODIFY `cod_esquadrao` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Código auto-incrementado para os esquadões StarWars';
+--
 -- AUTO_INCREMENT de tabela `personagem`
 --
 ALTER TABLE `personagem`
@@ -131,6 +181,13 @@ ALTER TABLE `starship_type`
 --
 -- Restrições para dumps de tabelas
 --
+
+--
+-- Restrições para tabelas `membro_esquadrao`
+--
+ALTER TABLE `membro_esquadrao`
+  ADD CONSTRAINT `FK_MEMBRO_ESQUADRAO` FOREIGN KEY (`cod_esquadrao`) REFERENCES `esquadrao` (`cod_esquadrao`),
+  ADD CONSTRAINT `FK_MEMBRO_PERSONAGEM` FOREIGN KEY (`cod_personagem`) REFERENCES `personagem` (`cod_personagem`);
 
 --
 -- Restrições para tabelas `starship`
