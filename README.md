@@ -32,3 +32,7 @@ O principal objetivo é o de desenvolver as habilidades de cada um dos estudante
 * Abrir o endereço:
   * http://localhost:3000/
   * http://localhost:3000/starshiptype
+
+## Dicas
+* [Um modelo de ramificação Git bem-sucedido](https://nvie.com/posts/a-successful-git-branching-model/)
+* [Git e contribuições para projetos Open Source - Udemy](https://www.udemy.com/share/1002c0AkodclZQQn4=/)
