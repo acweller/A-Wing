@@ -17,10 +17,13 @@ Node.js (express, morgan, promise-mysql, cors)
 Clonar o projeto
 Acessar a pasta "Server" e executar o comando:
 - npm i
+
 Executar o seguinte comando para iniciar o compilador do TScript:
 - npm run build
+
 Abrir um segundo terminal e iniciar o serviço:
 - npm run dev
+
 Abrir o endereço:
 - http://localhost:3000/
 - http://localhost:3000/starshiptype
