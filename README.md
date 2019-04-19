@@ -10,3 +10,17 @@ Este projeto se prepõe a servir de base para que os participantes do LEDS Santa
 O principal objetivo é o de desenvolver as habilidades de cada um dos estudantes no desenvolvimento colaborativo de um Sistema Web.
 
 ## Ferramentas
+Angular
+Node.js (express, morgan, promise-mysql, cors)
+
+## Execução do Projeto
+Clonar o projeto
+Acessar a pasta "Server" e executar o comando:
+- npm i
+Executar o seguinte comando para iniciar o compilador do TScript:
+- npm run build
+Abrir um segundo terminal e iniciar o serviço:
+- npm run dev
+Abrir o endereço:
+- http://localhost:3000/
+- http://localhost:3000/starshiptype
