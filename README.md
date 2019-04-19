@@ -10,20 +10,24 @@ Este projeto se prepõe a servir de base para que os participantes do LEDS Santa
 O principal objetivo é o de desenvolver as habilidades de cada um dos estudantes no desenvolvimento colaborativo de um Sistema Web.
 
 ## Ferramentas
-* [Angular](https://angular.io/guide/quickstart)
-* [Node.js](https://nodejs.org/en/) (Módulos: express, morgan, promise-mysql, cors)
-* [GitKraken](https://www.gitkraken.com/): Para clonar o projeto para a sua máquina
+* [Angular](https://angular.io/guide/quickstart);
+* [Node.js](https://nodejs.org/en/) (Módulos: express, morgan, promise-mysql, cors);
+* MySql para o banco de dados;
+* PhpMyAdmin para gerenciar o BD (Crie o usuário phpmyadmin, com senha phpmyadmin);
+* [GitKraken](https://www.gitkraken.com/): Para controle de versão via Git;
 * Editores sugeridos para o projeto:
   * [Atom](https://atom.io/)
   * [Visual Studio Code](https://code.visualstudio.com/)
-* [Postman](https://www.getpostman.com/postman)
+* [Postman](https://www.getpostman.com/postman).
 
 ## Execução do Projeto
-* Acessar a pasta "Server" e executar o comando:
+* Clonar este projeto para a sua máquina via GitKraken;
+* Usar o arquivo `database/db_awing.sql` para criar a base de dados via MySql ou PhpMyAdmin;
+* Abrir um terminal, acessar a pasta "Server" e executar este comando para instalar os módulos necessários ao projeto:
   * npm i
-* Executar o seguinte comando para iniciar o compilador do TScript:
+* Executar o seguinte comando para iniciar o compilador do TScript (manter ativo):
   * npm run build
-* Abrir um segundo terminal e iniciar o serviço:
+* Abrir um segundo terminal e iniciar o servidor:
   * npm run dev
 * Abrir o endereço:
   * http://localhost:3000/
