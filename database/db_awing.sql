@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Tempo de geração: 18/04/2019 às 16:14
+-- Tempo de geração: 18/04/2019 às 20:34
 -- Versão do servidor: 5.7.25-1
 -- Versão do PHP: 7.3.3-1
 
@@ -36,6 +36,11 @@ CREATE TABLE `esquadrao` (
   `datahora` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Data e Hora da última modificação'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Esquadrões conhecidos no universo Star Wars';
 
+--
+-- Tabela truncada antes do insert `esquadrao`
+--
+
+TRUNCATE TABLE `esquadrao`;
 -- --------------------------------------------------------
 
 --
@@ -50,6 +55,11 @@ CREATE TABLE `membro_esquadrao` (
   `datahora` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Data e Hora da última modificação'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Tabela truncada antes do insert `membro_esquadrao`
+--
+
+TRUNCATE TABLE `membro_esquadrao`;
 -- --------------------------------------------------------
 
 --
@@ -65,6 +75,11 @@ CREATE TABLE `personagem` (
   `datahora` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Data e Hora da última modificação'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Personagens da saga Star Wars';
 
+--
+-- Tabela truncada antes do insert `personagem`
+--
+
+TRUNCATE TABLE `personagem`;
 -- --------------------------------------------------------
 
 --
@@ -81,6 +96,11 @@ CREATE TABLE `starship` (
   `datahora` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Data e Hora de ultima atualização'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Naves utilizadas no universo Star Wars';
 
+--
+-- Tabela truncada antes do insert `starship`
+--
+
+TRUNCATE TABLE `starship`;
 -- --------------------------------------------------------
 
 --
@@ -95,6 +115,11 @@ CREATE TABLE `starship_pilot` (
   `datahora` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Data e Hora da última modificação'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Tabela truncada antes do insert `starship_pilot`
+--
+
+TRUNCATE TABLE `starship_pilot`;
 -- --------------------------------------------------------
 
 --
@@ -108,6 +133,21 @@ CREATE TABLE `starship_type` (
   `descricao` varchar(3000) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'Descrição da Nave',
   `datahora` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Data e Hora da última modificação'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Tipos de naves utilizadas no universo Star Wars';
+
+--
+-- Tabela truncada antes do insert `starship_type`
+--
+
+TRUNCATE TABLE `starship_type`;
+--
+-- Fazendo dump de dados para tabela `starship_type`
+--
+
+INSERT INTO `starship_type` (`cod_type`, `nom_type`, `descricao`, `datahora`) VALUES(1, 'A-Wing', 'With its sleek arrowhead shape, streamlined cockpit, and massive twin engines, the A-wing is faster than even the TIE interceptor.', '2019-04-18 23:03:05');
+INSERT INTO `starship_type` (`cod_type`, `nom_type`, `descricao`, `datahora`) VALUES(2, 'Y-Wing', 'The Y-wing is a workhorse starfighter has been in use since the Clone Wars.', '2019-04-18 23:00:13');
+INSERT INTO `starship_type` (`cod_type`, `nom_type`, `descricao`, `datahora`) VALUES(3, 'X-Wing', 'The X-wing is a versatile Rebel Alliance starfighter that balances speed with firepower.', '2019-04-18 22:58:41');
+INSERT INTO `starship_type` (`cod_type`, `nom_type`, `descricao`, `datahora`) VALUES(4, 'YT-1300 Corellian', 'The Corellian YT-1300 was used as a freighter and transport, and some saw service as intermodal tugs in orbital freight yards.', '2019-04-18 23:06:49');
+INSERT INTO `starship_type` (`cod_type`, `nom_type`, `descricao`, `datahora`) VALUES(7, 'Imperial Star Destroyer', 'The wedge-shaped Imperial I-class Star Destroyer had a length of 1,600 meters, and over 37,000 crew on board.', '2019-04-18 23:18:10');
 
 --
 -- Índices de tabelas apagadas
@@ -177,7 +217,7 @@ ALTER TABLE `starship`
 -- AUTO_INCREMENT de tabela `starship_type`
 --
 ALTER TABLE `starship_type`
-  MODIFY `cod_type` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Código auto-incrementado para o tipo de naves';
+  MODIFY `cod_type` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Código auto-incrementado para o tipo de naves', AUTO_INCREMENT=8;
 --
 -- Restrições para dumps de tabelas
 --
