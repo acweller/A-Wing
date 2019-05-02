@@ -33,6 +33,9 @@ O principal objetivo é o de desenvolver as habilidades de cada um dos estudante
   * http://localhost:3000/
   * http://localhost:3000/starshiptype
 
+## Vídeo de apoio
+* [Angular Mysql CRUD Tutorial, REST API Node & Typescript](https://www.youtube.com/watch?v=lxYB79ANJM8).
+
 ## Dicas
 * [Um modelo de ramificação Git bem-sucedido](https://nvie.com/posts/a-successful-git-branching-model/)
 * [Git e contribuições para projetos Open Source - Udemy](https://www.udemy.com/share/1002c0AkodclZQQn4=/)
