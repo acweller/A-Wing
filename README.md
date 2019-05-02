@@ -1,7 +1,7 @@
 # A-Wing
 Sistema Web do LEDS Santa Teresa para estudos sobre o *framework* Angular (A-Wing).
 [<img src="https://vignette.wikia.nocookie.net/pt.starwars/images/8/8d/A-wing_DICE.png/revision/latest?cb=20180116223039" alt="A-Wing" width="50%" height="50%">](https://www.starwars.com/databank/a-wing-fighter)
- 
+
 ## Introdução
 Sistema Web com controle de acesso de usuários e cadastro de informações sobre Naves, Pilotos de Naves e esquadrões da franquia Star Wars.
 
@@ -39,3 +39,5 @@ O principal objetivo é o de desenvolver as habilidades de cada um dos estudante
 ## Dicas
 * [Um modelo de ramificação Git bem-sucedido](https://nvie.com/posts/a-successful-git-branching-model/)
 * [Git e contribuições para projetos Open Source - Udemy](https://www.udemy.com/share/1002c0AkodclZQQn4=/)
+
+...
