@@ -13,7 +13,7 @@ class MembroEsquadraoController {
     getOne(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const { id } = req.params;
-            const membro_esquadrao = yield database_1.pola.query('SELECT * FROM membro_esquadrao WHERE cod_esquadrão = ?', [id]);
+            const membro_esquadrao = yield database_1.pola.query('SELECT * FROM membro_esquadrao WHERE cod_esquadrao = ?', [id]);
             console.log(membro_esquadrao);
             if (membro_esquadrao.length > 0) {
                 return res.json(membro_esquadrao[0]);
@@ -38,9 +38,10 @@ class MembroEsquadraoController {
     delete(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const { id } = req.params;
-            const membro_esquadrao = yield database_1.pola.query('DELETE FROM membro_esquadrao WHERE cod_esquadrão = ?', [id]);
-            console.log(membro_esquadrao);
-            res.json({ message: 'Membro Esquadrao deleted' });
+            var str = id.split(',', 2);
+            const membro_esquadrao = yield database_1.pola.query('DELETE FROM membro_esquadrao WHERE cod_personagem =?', str[0] + 'and cod_esquadrao = ?' + str[1]);
+            console.log(membro_esquadrao + " isso");
+            res.json({ message: 'Membro Esquadrao deletado ' + id.split(',') });
         });
     }
     update(req, res) {

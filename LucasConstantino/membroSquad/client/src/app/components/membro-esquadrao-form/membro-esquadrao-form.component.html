@@ -1,0 +1,28 @@
+<div class="col-md-4 offset-md-4">
+  <div class="card">
+    <div class="card-body">
+      <form>
+        <div class="form-group">
+          <input type="number" name="Codigo Personagem" [(ngModel)]="MembroEsquadrao.cod_personagem" placeholder="Codigo Personagem" class="form-control">
+        </div>
+        <div class="form-group">
+          <input type="number" name="Codigo Esquadrao" placeholder="Codigo Esquadrao" [(ngModel)]="MembroEsquadrao.cod_esquadrao" class="form-control">
+        </div>
+        <div class="form-group">
+          <input type="text" name="Descrição"  placeholder="Descrição" [(ngModel)]="MembroEsquadrao.descricao" rows="2" class="form-control">
+        </div>  
+        <button class = "btn btn-sucess btn-block" (click)="saveMembroEsquadrao()">
+          Adicionar
+        </button>    
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class= "col-md-4">
+  <div class = "card card-body text-center">
+    <h3>Personagem:{{MembroEsquadrao.cod_personagem}}<br>Esquadrao:{{MembroEsquadrao.cod_esquadrao}}</h3>
+    <img src="https://i.pinimg.com/originals/29/50/ad/2950ad50399d6e0f8043c281cd591b10.jpg" class="card-img-top">
+      <p>Descrição:<br>{{MembroEsquadrao.descricao}}<br>{{MembroEsquadrao.datahora | date: 'yyyy-MM-dd HH:mm'}}</p>
+  </div>
+</div>
