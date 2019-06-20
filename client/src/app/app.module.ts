@@ -8,15 +8,18 @@ import { AppComponent } from './app.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { MembroEsquadraoListComponent } from './components/membro-esquadrao-list/membro-esquadrao-list.component';
 import { MembroEsquadraoFormComponent } from './components/membro-esquadrao-form/membro-esquadrao-form.component';
+import { StarshiptypeListComponent } from './components/starshiptype-list/starshiptype-list.component';
+import { StarshiptypeFormComponent } from './components/starshiptype-form/starshiptype-form.component'
 
-
-import { MembroEsquadraoService }  from './services/membro-esquadrao.service'
+import { MembroEsquadraoService }  from './services/membro-esquadrao.service';
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
     MembroEsquadraoListComponent,
     MembroEsquadraoFormComponent,
+    StarshiptypeListComponent,
+    StarshiptypeFormComponent,
   ],
   imports: [
     BrowserModule,

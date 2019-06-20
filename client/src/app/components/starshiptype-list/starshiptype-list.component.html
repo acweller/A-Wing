@@ -1,0 +1,17 @@
+<div class="col-md-4" *ngFor="let starshiptype of starshiptypes">
+  <div class="card text-center">
+    <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center ">
+      {{starshiptype.nom_type}}
+      <button class="btn-danger" (click)="deleteStarshiptype(starshiptype.cod_type)">
+        <i class="far fa-trash-alt"></i>
+      </button>
+    </div>
+    <!--img [src]="starshiptype.image" class="card-img-top"-->
+    <div class="card-body">
+      <p><i>Descrição:</i> {{starshiptype.descricao}}</p>
+      <a [routerLink]="['/starshiptype/edit', starshiptype.cod_type]" class="btn btn-info btn-block">
+        Edit
+      </a>
+    </div>
+  </div>
+</div>

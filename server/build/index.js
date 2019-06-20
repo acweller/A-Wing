@@ -8,6 +8,7 @@ const morgan_1 = __importDefault(require("morgan"));
 const cors_1 = __importDefault(require("cors"));
 const indexRoutes_1 = __importDefault(require("./routes/indexRoutes"));
 const MembroEsquadraoRoutes_1 = __importDefault(require("./routes/MembroEsquadraoRoutes"));
+const starshipTypeRoutes_1 = __importDefault(require("./routes/starshipTypeRoutes"));
 class Server {
     constructor() {
         this.app = express_1.default();
@@ -24,6 +25,7 @@ class Server {
     route() {
         this.app.use('/', indexRoutes_1.default);
         this.app.use('/api/MembroEsquadrao', MembroEsquadraoRoutes_1.default);
+        this.app.use('/api/starshiptype', starshipTypeRoutes_1.default);
     }
     start() {
         this.app.listen(this.app.get('port'), () => {
