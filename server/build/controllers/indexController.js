@@ -2,7 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 class IndexController {
     index(req, res) {
-        res.send('A-Wing Index');
+        res.json({
+            tex: 'The API: /api/MembroEsquadrao'
+        });
     }
 }
 exports.indexController = new IndexController();
