@@ -30,7 +30,7 @@ export class StarshiptypeListComponent implements OnInit {
     )
   }
 
-  deleteGame(id: string){
+  deleteStarshiptype(id: string){
     this.starshiptypesService.deleteStarshiptype(id).subscribe(
       res => {
         console.log(res);

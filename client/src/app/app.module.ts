@@ -12,6 +12,7 @@ import { StarshiptypeListComponent } from './components/starshiptype-list/starsh
 import { StarshiptypeFormComponent } from './components/starshiptype-form/starshiptype-form.component'
 
 import { MembroEsquadraoService }  from './services/membro-esquadrao.service';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,6 +21,7 @@ import { MembroEsquadraoService }  from './services/membro-esquadrao.service';
     MembroEsquadraoFormComponent,
     StarshiptypeListComponent,
     StarshiptypeFormComponent,
+    SidebarComponent,
   ],
   imports: [
     BrowserModule,

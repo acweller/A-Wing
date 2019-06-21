@@ -13,7 +13,7 @@ export class StarshiptypesService {
     return this.http.get(`${this.API_URI}/starshiptype`);
   }
 
-  getStarshiptype(id: string){
+  getStarshiptype(id: string|number){
     return this.http.get(`${this.API_URI}/starshiptype/${id}`);
   }
 
