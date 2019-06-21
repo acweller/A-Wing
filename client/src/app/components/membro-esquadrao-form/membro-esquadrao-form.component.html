@@ -10,10 +10,10 @@
         </div>
         <div class="form-group">
           <input type="text" name="Descrição"  placeholder="Descrição" [(ngModel)]="MembroEsquadrao.descricao" rows="2" class="form-control">
-        </div>  
+        </div>
         <button class = "btn btn-sucess btn-block" (click)="saveMembroEsquadrao()">
           Adicionar
-        </button>    
+        </button>
       </form>
     </div>
   </div>
@@ -22,7 +22,8 @@
 <div class= "col-md-4">
   <div class = "card card-body text-center">
     <h3>Personagem:{{MembroEsquadrao.cod_personagem}}<br>Esquadrao:{{MembroEsquadrao.cod_esquadrao}}</h3>
-    <img src="https://i.pinimg.com/originals/29/50/ad/2950ad50399d6e0f8043c281cd591b10.jpg" class="card-img-top">
+    <!--img src="https://i.pinimg.com/originals/29/50/ad/2950ad50399d6e0f8043c281cd591b10.jpg" class="card-img-top"-->
+    <img src="/assets/squad.jpg" class="card-img-top">
       <p>Descrição:<br>{{MembroEsquadrao.descricao}}<br>{{MembroEsquadrao.datahora | date: 'yyyy-MM-dd HH:mm'}}</p>
   </div>
 </div>

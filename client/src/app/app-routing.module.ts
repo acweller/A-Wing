@@ -7,6 +7,8 @@ import {MembroEsquadraoFormComponent} from './components/membro-esquadrao-form/m
 import { StarshiptypeListComponent } from './components/starshiptype-list/starshiptype-list.component';
 import { StarshiptypeFormComponent } from './components/starshiptype-form/starshiptype-form.component';
 
+import { SquadListComponent } from './components/squad-list/squad-list.component';
+import { SquadFormComponent } from './components/squad-form/squad-form.component';
 
 const routes: Routes = [
   {
@@ -23,8 +25,8 @@ const routes: Routes = [
     component: StarshiptypeFormComponent
   },
   {
-   path: 'starshiptype/edit/:id',
-   component: StarshiptypeFormComponent
+    path: 'starshiptype/edit/:id',
+    component: StarshiptypeFormComponent
   },
   {
     path: 'MembroEsquadrao',
@@ -33,6 +35,18 @@ const routes: Routes = [
   {
     path: 'MembroEsquadrao/add',
     component: MembroEsquadraoFormComponent
+  },
+  {
+    path: 'squad',
+    component: SquadListComponent
+  },
+  {
+    path: 'squad/add',
+    component: SquadFormComponent
+  },
+  {
+    path: 'squad/edit/:cod_esquadrao',
+    component: SquadFormComponent
   }
 ];
 
