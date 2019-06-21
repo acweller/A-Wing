@@ -5,6 +5,6 @@ exports.default = {
         host: 'localhost',
         user: 'phpmyadmin',
         password: 'phpmyadmin',
-        database: 'db_awing'
+        database: 'db_awing',
     }
 };
