@@ -1,7 +1,7 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
-import { starshiptype } from 'src/app/models/starshiptype';
 import { ActivatedRoute, Router } from "@angular/router";
 
+import { starshiptype } from 'src/app/models/starshiptype';
 import { StarshiptypesService } from 'src/app/services/starshiptypes.service';
 
 @Component({
@@ -41,7 +41,6 @@ export class StarshiptypeFormComponent implements OnInit {
   }
 
   saveStarshiptype(){
-    console.log(this.starshiptype);
     delete this.starshiptype.datahora;
     delete this.starshiptype.cod_type;
     this.typeService.saveStarshiptype(this.starshiptype)

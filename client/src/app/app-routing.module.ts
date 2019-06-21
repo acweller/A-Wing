@@ -37,6 +37,10 @@ const routes: Routes = [
     component: MembroEsquadraoFormComponent
   },
   {
+    path: 'MembroEsquadrao/edit/:id',
+    component: MembroEsquadraoFormComponent
+  },
+  {
     path: 'squad',
     component: SquadListComponent
   },

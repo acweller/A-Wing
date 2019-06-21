@@ -1,18 +1,19 @@
 <div class="col-md-4" *ngFor = "let membroEsquadrao of membrosEsquadrao">
   <div class="card text-center">
     <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
-        <p>Codigo do Personagem{{membroEsquadrao.cod_personagem}}</p>
-        <p>Codigo do Esquadão: {{membroEsquadrao.cod_esquadrao}}</p>
+        <p>Cod. Personagem{{membroEsquadrao.cod_personagem}}</p>
+        <p>Cod. Esquadão: {{membroEsquadrao.cod_esquadrao}}</p>
         <button class="btn-danger" (click)="excluirMembroEsquadrao(membroEsquadrao.cod_personagem,membroEsquadrao.cod_esquadrao)">
           <i class="far fa-trash-alt"></i>
         </button>
     </div>
-    <img src="https://i.pinimg.com/originals/29/50/ad/2950ad50399d6e0f8043c281cd591b10.jpg" class="card-img-top">
+    <!--img src="https://i.pinimg.com/originals/29/50/ad/2950ad50399d6e0f8043c281cd591b10.jpg" class="card-img-top"-->
+    <img src="/assets/squad.jpg" class="card-img-top">
     <div class="card-body">
       <p>Descrição:<br>{{membroEsquadrao.descricao}}</p>
       <P>Hora de Registro:<br>{{membroEsquadrao.datahora | date:'yyyy-MM-dd'}}
-      <a href="" class="btn btn-info btn-block">
-          Editar
+      <a [routerLink]="['/MembroEsquadrao/edit', membroEsquadrao.cod_personagem + ',' + membroEsquadrao.cod_esquadrao]" class="btn btn-info btn-block">
+        Editar
       </a>
     </div>
   </div>

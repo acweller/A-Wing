@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class MembroEsquadraoService {
   API_URL = 'http://localhost:3000/api'
+
   constructor(private http: HttpClient) { }
 
   getMembrosEsquadrao(){
@@ -17,16 +18,17 @@ export class MembroEsquadraoService {
     return this.http.get(`${this.API_URL}/MembroEsquadrao/${id}`);
   }
 
-  deleteMembroEsquadrao(cod_personagem,cod_esquadrao:String){
+  deleteMembroEsquadrao(cod_personagem:String, cod_esquadrao:String){
+    console.log('deletando membro esq service');
     return this.http.delete(`${this.API_URL}/MembroEsquadrao/${cod_personagem},${cod_esquadrao}`);
   }
 
-  saveMembroEsquadrao(membroesquadrao: membroEsquadrao){
-    return this.http.post(`${this.API_URL}/MembroEsquadrao`, membroesquadrao);
+  saveMembroEsquadrao(membro: membroEsquadrao){
+    return this.http.post(`${this.API_URL}/MembroEsquadrao`, membro);
   }
 
-  updateMembroEsquadrao(id: String, updateMembroEsquadrao: membroEsquadrao): Observable<membroEsquadrao> {
-    return this.http.put(`${this.API_URL}/MembroEsquadrao/${id}`,updateMembroEsquadrao);
+  updateMembroEsquadrao(updateMembroEsquadrao: membroEsquadrao): Observable<membroEsquadrao> {
+    return this.http.put(`${this.API_URL}/MembroEsquadrao/${updateMembroEsquadrao.cod_personagem},${updateMembroEsquadrao.cod_esquadrao}`,updateMembroEsquadrao);
   }
- 
+
 }

@@ -12,4 +12,4 @@ pool.getConnection()
     console.log('DB is connected');
 });
 exports.default = pool;
-exports.pola = pool;
+exports.poll = pool;

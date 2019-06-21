@@ -13,7 +13,8 @@ class MembroEsquadraoController {
     getOne(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const { id } = req.params;
-            const membro_esquadrao = yield database_1.pola.query('SELECT * FROM membro_esquadrao WHERE cod_esquadrao = ?', [id]);
+            var str = id.split(',', 2);
+            const membro_esquadrao = yield database_1.poll.query('SELECT * FROM membro_esquadrao WHERE cod_personagem =?', str[0] + 'and cod_esquadrao = ?' + str[1]);
             console.log(membro_esquadrao);
             if (membro_esquadrao.length > 0) {
                 return res.json(membro_esquadrao[0]);
@@ -23,15 +24,15 @@ class MembroEsquadraoController {
     }
     list(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const membro_esquadrao = yield database_1.pola.query('SELECT * FROM membro_esquadrao');
+            const membro_esquadrao = yield database_1.poll.query('SELECT * FROM membro_esquadrao');
             res.json(membro_esquadrao);
         });
     }
     create(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            yield database_1.pola.query('INSERT INTO membro_esquadrao set ?', [req.body]);
+            yield database_1.poll.query('INSERT INTO membro_esquadrao set ?', [req.body]);
             res.json({
-                message: 'Membro Esquadrao saved!!!'
+                message: 'Membro Esquadrao Criado!!!'
             });
         });
     }
@@ -39,16 +40,20 @@ class MembroEsquadraoController {
         return __awaiter(this, void 0, void 0, function* () {
             const { id } = req.params;
             var str = id.split(',', 2);
-            const membro_esquadrao = yield database_1.pola.query('DELETE FROM membro_esquadrao WHERE cod_personagem =?', str[0] + 'and cod_esquadrao = ?' + str[1]);
-            console.log(membro_esquadrao + " isso");
-            res.json({ message: 'Membro Esquadrao deletado ' + id.split(',') });
+            // const membro_esquadrao = await poll.query('DELETE FROM membro_esquadrao WHERE cod_personagem =?',str[0]+'and cod_esquadrao = ?'+str[1]);
+            const membro_esquadrao = yield database_1.poll.query('DELETE FROM membro_esquadrao WHERE cod_personagem = ? and cod_esquadrao = ?', [str[0], str[1]]);
+            console.log(membro_esquadrao + " isso foi deletado.");
+            res.json({ message: 'Membro Esquadrao Deletado ' + id.split(',') });
         });
     }
     update(req, res) {
-        res.json({
-            text: 'Updating Membro Esquadrao: ' + req.params.id
+        return __awaiter(this, void 0, void 0, function* () {
+            const { id } = req.params;
+            var str = id.split(',', 2);
+            yield database_1.poll.query('UPDATE membro_esquadrao set ? WHERE cod_personagem = ? and cod_esquadrao = ?', [req.body, str[0], str[1]]);
+            res.json({ text: 'Membro Esquadrao Atualizado ' + id.split(',') });
         });
     }
 }
 exports.MembroController = new MembroEsquadraoController();
-//export default gamesController; 
+//export default gamesController;
