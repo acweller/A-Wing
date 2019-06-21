@@ -11,30 +11,26 @@ import { Observable } from 'rxjs';
 export class SquadService {
   API_URI = 'http://localhost:3000/api';
 
-
   constructor(private http: HttpClient) { }
 
-getSquads(){
-  return this.http.get(`${this.API_URI}/squad`);
-}
+  getSquads() {
+    return this.http.get(`${this.API_URI}/squad`);
+  }
 
-getSquad(id: string){
-  return this.http.get(`${this.API_URI}/squad/${id}`);
+  getSquad(id: string) {
+    return this.http.get(`${this.API_URI}/squad/${id}`);
+  }
 
-}
+  deleteSquad(id: string) {
+    return this.http.delete(`${this.API_URI}/squad/${id}`);
+  }
 
-deleteSquad(id: string){
-  return this.http.delete(`${this.API_URI}/squad/${id}`);
-}
-
-
-  saveSquad(squad: Squad){
+  saveSquad(squad: Squad) {
     return this.http.post(`${this.API_URI}/squad`, squad);
-
   }
 
-
-  updateSquad(cod_esquadrao: number, updateSquad: Squad): Observable<Squad>{
-    return this.http.put('${this.API-URI}/squad/${id}', updateSquad);
+  updateSquad(cod_esquadrao: string|number, updateSquad: Squad): Observable<Squad> {
+    return this.http.put(`${this.API_URI}/squad/${cod_esquadrao}`, updateSquad);
   }
+
 }

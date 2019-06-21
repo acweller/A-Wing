@@ -1,20 +1,15 @@
 <div class="col-md-4" *ngFor= "let squad of squads">
- <div class="card text-center">
+  <div class="card text-center">
     <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
       {{squad.nom_esquadrao}}
-      <button class="btn btn-danger" (click) ="deleteSquad(squad.cod_esquadrao)">
-        <i class= "far fa-trash-alt"></i>
+      <button class="btn-danger" (click) ="deleteSquad(squad.cod_esquadrao)">
+        <i class="far fa-trash-alt"></i>
       </button>
     </div>
-    
-
-
-    <div class="card-dody">
+    <div class="card-body">
       <p>{{squad.descricao}}</p>
-     
-
-      <a [routerLink]="['/squad/edit', squad.cod_esquadrao]" class="btn btn-info btn-block bg-dark">
-        EDIT SQUAD
+      <a [routerLink]="['/squad/edit', squad.cod_esquadrao]" class="btn btn-info btn-block">
+        Editar
         </a>
     </div>
   </div>
