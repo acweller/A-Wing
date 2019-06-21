@@ -1,6 +1,6 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 import { SquadService } from '../../services/squad.service';
-import { Squad } from 'src/app/models/Squad';
+import { Squad } from 'src/app/models/squad';
 
 @Component({
   selector: 'app-squad-list',
@@ -8,7 +8,7 @@ import { Squad } from 'src/app/models/Squad';
   styleUrls: ['./squad-list.component.css']
 })
 export class SquadListComponent implements OnInit {
-  
+
   @HostBinding('class') classes = 'row';
 
   squads: any = [];
@@ -32,11 +32,10 @@ export class SquadListComponent implements OnInit {
         res => {
           console.log(res)
           this.getSquads();
-        
+
         },
         err => console.error(err)
       )
   }
 
   }
-  

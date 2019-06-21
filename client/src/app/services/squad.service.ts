@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import { Squad } from '../models/Squad';
+import { Squad } from '../models/squad';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -38,5 +38,3 @@ deleteSquad(id: string){
     return this.http.put('${this.API-URI}/squad/${id}', updateSquad);
   }
 }
-
-
