@@ -1,22 +1,20 @@
-import { Router } from 'express'; 
+import { Router } from 'express';
 import { indexController } from '../controllers/indexController';
-import { MembroController } from '../controllers/MembroEsquadraoController';
 
 class IndexRoutes {
 
-   public router: Router = Router();
+    public router: Router = Router();
 
-   constructor(){
-      this.config();
-   }
+    constructor() {
+        this.config();
+    }
 
 
    config(): void{
-      this.router.get('/', indexController.index);
-   }
+        this.router.get('/', indexController.index);
+    }
 
 }
+
 const indexRoutes = new IndexRoutes();
 export default indexRoutes.router;
-
-

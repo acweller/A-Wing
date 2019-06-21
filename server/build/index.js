@@ -10,6 +10,7 @@ const indexRoutes_1 = __importDefault(require("./routes/indexRoutes"));
 const starshipTypeRoutes_1 = __importDefault(require("./routes/starshipTypeRoutes"));
 const MembroEsquadraoRoutes_1 = __importDefault(require("./routes/MembroEsquadraoRoutes"));
 const squadRouters_1 = __importDefault(require("./routes/squadRouters"));
+const personagemRoutes_1 = __importDefault(require("./routes/personagemRoutes"));
 class Server {
     constructor() {
         this.app = express_1.default();
@@ -28,6 +29,7 @@ class Server {
         this.app.use('/api/MembroEsquadrao', MembroEsquadraoRoutes_1.default);
         this.app.use('/api/starshiptype', starshipTypeRoutes_1.default);
         this.app.use('/api/squad', squadRouters_1.default);
+        this.app.use('/personagens', personagemRoutes_1.default);
     }
     start() {
         this.app.listen(this.app.get('port'), () => {
