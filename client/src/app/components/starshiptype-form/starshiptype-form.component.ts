@@ -27,16 +27,13 @@ export class StarshiptypeFormComponent implements OnInit {
   ngOnInit() {
     const params  = this.activeRoute.snapshot.params;
     if (params.id){
-      console.log("OK - ID: "+params.id);
       this.typeService.getStarshiptype(params.id).subscribe(
         res => {
-          console.log("OK");
           console.log(res);
           this.starshiptype = res;
           this.edit = true;
         },
         err => {
-          console.log("Erro");
           console.log(err);
         }
       )

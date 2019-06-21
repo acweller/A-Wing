@@ -13,4 +13,3 @@ pool.getConnection()
 export default pool;
 
 export const pola = pool;
-

@@ -14,10 +14,13 @@ import { StarshiptypeListComponent } from './components/starshiptype-list/starsh
 import { StarshiptypeFormComponent } from './components/starshiptype-form/starshiptype-form.component'
 import { SquadFormComponent } from './components/squad-form/squad-form.component';
 import { SquadListComponent } from './components/squad-list/squad-list.component';
+import { PersonagemFormComponent } from './components/personagem-form/personagem-form.component';
+import { PersonagemListComponent } from './components/personagem-list/personagem-list.component';
 
 import { MembroEsquadraoService }  from './services/membro-esquadrao.service';
 import { StarshiptypesService }  from './services/starshiptypes.service';
 import { SquadService } from './services/squad.service';
+import { PersonagemService } from './services/personagem.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,9 @@ import { SquadService } from './services/squad.service';
     StarshiptypeListComponent,
     StarshiptypeFormComponent,
     SquadFormComponent,
-    SquadListComponent
+    SquadListComponent,
+    PersonagemFormComponent,
+    PersonagemListComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +45,8 @@ import { SquadService } from './services/squad.service';
   providers: [
     MembroEsquadraoService,
     StarshiptypesService,
-    SquadService
+    SquadService,
+    PersonagemService
   ],
   bootstrap: [AppComponent]
 })
