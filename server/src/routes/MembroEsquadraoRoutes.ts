@@ -1,8 +1,7 @@
-import { Router } from 'express'; 
+import { Router } from 'express';
 import { MembroController } from '../controllers/MembroEsquadraoController';
 
 class MembroEsquadraoRoutes {
-
    public router: Router = Router();
 
    constructor(){
@@ -13,8 +12,8 @@ class MembroEsquadraoRoutes {
       this.router.get('/',MembroController.list);
       this.router.get('/:id',MembroController.getOne);
       this.router.post('/', MembroController.create);
-      this.router.delete('/:id',MembroController.delete)   
-      this.router.put('/:id',MembroController.update)   
+      this.router.delete('/:id',MembroController.delete)
+      this.router.put('/:id',MembroController.update)
       //
    }
 
@@ -22,5 +21,3 @@ class MembroEsquadraoRoutes {
 }
 const MembroRoutes = new MembroEsquadraoRoutes();
 export default MembroRoutes.router;
-
-

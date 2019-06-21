@@ -17,18 +17,23 @@ export class MembroEsquadraoListComponent implements OnInit {
   getMembroEsquadrao(){
     this.membrosEsquadraoService.getMembrosEsquadrao().subscribe(
       res => {
-        this.membrosEsquadrao= res 
+        this.membrosEsquadrao= res
       },
       err => console.error(err)
     )
   }
-  excluirMembroEsquadrao(cod_personagem,cod_esquadrao:String){
+  excluirMembroEsquadrao(cod_personagem:string, cod_esquadrao:String){
+    console.log('deletando membro esq component');
     this.membrosEsquadraoService.deleteMembroEsquadrao(cod_personagem,cod_esquadrao).subscribe(
       res => {
+        console.log('OK');
         console.log(res);
         this.getMembroEsquadrao();
       },
-      err => console.log(err)
+      err => {
+        console.log('Erro');
+        console.log(err);
+      }
     )
   }
 

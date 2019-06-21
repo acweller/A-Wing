@@ -11,8 +11,8 @@
         <div class="form-group">
           <input type="text" name="Descrição"  placeholder="Descrição" [(ngModel)]="MembroEsquadrao.descricao" rows="2" class="form-control">
         </div>
-        <button class = "btn btn-sucess btn-block" (click)="saveMembroEsquadrao()">
-          Adicionar
+        <button class="btn btn-success btn-block" (click)="edit ? updateMembroEsquadrao() : saveMembroEsquadrao()">
+          Salvar
         </button>
       </form>
     </div>

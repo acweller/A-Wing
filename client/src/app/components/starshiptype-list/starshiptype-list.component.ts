@@ -22,10 +22,8 @@ export class StarshiptypeListComponent implements OnInit {
   getStarshiptypes(){
     this.starshiptypesService.getStarshiptypes().subscribe(
       res => {
-        // console.log("===>> getStarshiptypes");
         this.starshiptypes = res;
       },  // Resposta
-      // err => console.log("===>> Erro getStarshiptypes")
       err => console.error(err) // error
     )
   }
