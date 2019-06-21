@@ -7,15 +7,12 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-const database_1 = __importDefault(require("../database"));
+const database_1 = require("../database");
 class SquadController {
     create(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            yield database_1.default.query('INSERT INTO esquadrao set ?', [req.body]);
+            yield database_1.poll.query('INSERT INTO esquadrao set ?', [req.body]);
             res.json({
                 message: 'Squad saved!!!'
             });
@@ -24,7 +21,7 @@ class SquadController {
     update(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const { id } = req.params;
-            yield database_1.default.query('UPDATE INTO esquadrao set ?', [req.body]);
+            yield database_1.poll.query('UPDATE esquadrao set ? WHERE cod_esquadrao = ?', [req.body, id]);
             res.json({
                 message: 'Updating squad'
             });
@@ -33,7 +30,7 @@ class SquadController {
     getOne(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const { id } = req.params;
-            const squad = yield database_1.default.query('SELECT * FROM esquadrao WHERE cod_esquadrao = ?', [id]);
+            const squad = yield database_1.poll.query('SELECT * FROM esquadrao WHERE cod_esquadrao = ?', [id]);
             console.log(squad);
             if (squad.length > 0) {
                 return res.json(squad[0]);
@@ -43,14 +40,14 @@ class SquadController {
     }
     list(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const squad = yield database_1.default.query('SELECT * FROM esquadrao');
+            const squad = yield database_1.poll.query('SELECT * FROM esquadrao');
             res.json(squad);
         });
     }
     delete(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const { id } = req.params;
-            const squad = yield database_1.default.query('DELETE FROM esquadrao WHERE cod_esquadrao = ?', [id]);
+            const squad = yield database_1.poll.query('DELETE FROM esquadrao WHERE cod_esquadrao = ?', [id]);
             console.log(squad);
             res.json({ message: 'Squad deleted' });
         });

@@ -6,7 +6,7 @@
           <input type="text" name="nom_esquadrao" [(ngModel)]="squad.nom_esquadrao" placeholder="Nome" class="form-control" autofocus>
         </div>
         <div class="form-group">
-            <textarea name="descricao"[(ngModel)]="squad.descricao" placeholder= "Descrição"  rows="2" class= "form-control"></textarea>
+            <textarea name="descricao"[(ngModel)]="squad.descricao" placeholder= "Descrição" rows="2" class= "form-control"></textarea>
           </div>
           <button class="btn btn-success btn-block" (click)="edit ? updateSquad() : saveNewSquad()">
               Salvar
