@@ -40,3 +40,6 @@ O principal objetivo é o de desenvolver as habilidades de cada um dos estudante
 * [Um modelo de ramificação Git bem-sucedido](https://nvie.com/posts/a-successful-git-branching-model/)
 * [Git e contribuições para projetos Open Source - Udemy](https://www.udemy.com/share/1002c0AkodclZQQn4=/)
 
+## Integração Contínua (CI)
+* [Todas ferramentas de CI para GitHub](https://github.blog/2017-11-07-github-welcomes-all-ci-tools/)
+* [Marketplace do GitHub - CI](https://github.com/marketplace/category/continuous-integration?before=Y3Vyc29yOjIx)
