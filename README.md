@@ -43,3 +43,4 @@ O principal objetivo é o de desenvolver as habilidades de cada um dos estudante
 ## Integração Contínua (CI)
 * [Todas ferramentas de CI para GitHub](https://github.blog/2017-11-07-github-welcomes-all-ci-tools/)
 * [Marketplace do GitHub - CI](https://github.com/marketplace/category/continuous-integration?before=Y3Vyc29yOjIx)
+* [Travis CI: Gratuito para OpenSource](https://github.com/marketplace/travis-ci)
