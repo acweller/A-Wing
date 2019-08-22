@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
 import { Squad } from '../models/squad';
 import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class SquadService {
-  API_URI = 'http://localhost:3000/api';
+  API_URI = environment.api_uri;
 
   constructor(private http: HttpClient) { }
 

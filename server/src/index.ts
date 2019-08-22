@@ -32,7 +32,7 @@ class Server {
     this.app.use('/api/MembroEsquadrao', MembroRoutes);
     this.app.use('/api/starshiptype', starshipTypeRoutes);
     this.app.use('/api/squad', squadRoutes);
-    this.app.use('/personagens', personagemRoutes);
+    this.app.use('/api/personagens', personagemRoutes);
   }
 
   start(): void{

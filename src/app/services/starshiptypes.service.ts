@@ -2,11 +2,15 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { starshiptype } from "../models/starshiptype";
 import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment';
+
 @Injectable({
   providedIn: 'root'
 })
+
 export class StarshiptypesService {
-  API_URI = 'http://localhost:3000/api';
+  API_URI = environment.api_uri;
+
   constructor(private http: HttpClient) { }
 
   getStarshiptypes(){

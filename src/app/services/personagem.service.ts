@@ -2,14 +2,14 @@ import { Personagem } from './../models/Personagem';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
-export class PersonagemService {
 
-  API_URI = 'http://localhost:3000';
+export class PersonagemService {
+  API_URI = environment.api_uri;
 
   constructor(private http: HttpClient) { }
 

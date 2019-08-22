@@ -29,7 +29,7 @@ class Server {
         this.app.use('/api/MembroEsquadrao', MembroEsquadraoRoutes_1.default);
         this.app.use('/api/starshiptype', starshipTypeRoutes_1.default);
         this.app.use('/api/squad', squadRouters_1.default);
-        this.app.use('/personagens', personagemRoutes_1.default);
+        this.app.use('/api/personagens', personagemRoutes_1.default);
     }
     start() {
         this.app.listen(this.app.get('port'), () => {
