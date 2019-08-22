@@ -24,6 +24,6 @@
     <img [src]="personagem.imagem == '' ? '/assets/sem.png' : personagem.imagem" class="card-img-top">
     <h3>{{personagem.cod_personagem}} . {{personagem.nom_personagem == '' ? 'Nome do Jogo' : personagem.nom_personagem}}</h3>
     <p>{{personagem.descricao == '' ? 'Descrição' : personagem.descricao}}</p>
-    <p>{{personagem.created_at | date: 'dd-MM-yyyy'}}</p>
+    <p>{{personagem.datahora | date: 'dd-MM-yyyy'}}</p>
   </div>
 </div>

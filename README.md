@@ -35,6 +35,21 @@ O principal objetivo é o de desenvolver as habilidades de cada um dos estudante
 * Abrir outro terminal (na pasta do projeto) e executar comando para iniciar o cliente em `http://localhost:4200/` e o servidor em `http://localhost:3000/`  (manter ativo este terminal):
   * `npm run serve`
 
+Obs.1: Caso deseje iniciar apenas o servidor, abra um terminal (na pasta do projeto)e execute:
+  * `cd server`
+  * `npm run dev`
+
+Obs.2: Para executar o Node em ambiente de produção deve-se incluir `NODE_ENV=production` antes do comando, por exemplo:
+  * `NODE_ENV=production node server/build/index.js`
+Em ambiente de desenvolvimento podemos executar o `nodemon` das seguintes formas:
+  * `npm run dev` equivale a `NODE_ENV=development npm run dev`
+
+## Montar uma Build do projeto Front-End
+ * `ng build` gera uma build do projeto e grava no diretório `dist/`
+ * `ng build --prod` gera uma build para enviar para o servidor de produção.
+
+Obs.: Os arquivos `./src/environment/environment.ts` e `./src/environment/environment.prod.ts` são utilizados para configurar algumas variáveis de ambiente que são utilizadas no ambiente de desenvolvimento e no ambiente de produção respectivamente. Ao gerar uma build de produção o Angular substitui o environment.ts pelo environment.prod.ts. [https://alligator.io/angular/environment-variables/]
+
 ## Vídeo de apoio
 * [Angular Mysql CRUD Tutorial, REST API Node & Typescript](https://www.youtube.com/watch?v=lxYB79ANJM8).
 * [Adding a Node + Typescript Backend to Your Angular App](https://youtu.be/Ad3fj9V7s6A)
@@ -51,10 +66,7 @@ O principal objetivo é o de desenvolver as habilidades de cada um dos estudante
 * [Continuous Integration with Angular and Travis CI](https://youtu.be/ojr2Dy0Pjhw)
 
 ## Informações do Angular CLI
-Siga os passos abaixo para realizar uma BUILD ou executar testes.
-
-### Montar uma Build do projeto
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Abaixo segue alguns detalhes gerados pelo Angular CLI (excluir futuramente).
 
 ### Running unit tests
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
