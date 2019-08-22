@@ -48,7 +48,7 @@ Em ambiente de desenvolvimento podemos executar o `nodemon` das seguintes formas
  * `ng build` gera uma build do projeto e grava no diretório `dist/`
  * `ng build --prod` gera uma build para enviar para o servidor de produção.
 
-Obs.: Os arquivos `./src/environment/environment.ts` e `./src/environment/environment.prod.ts` são utilizados para configurar algumas variáveis de ambiente que são utilizadas no ambiente de desenvolvimento e no ambiente de produção respectivamente. Ao gerar uma build de produção o Angular substitui o environment.ts pelo environment.prod.ts. [https://alligator.io/angular/environment-variables/]
+Obs.: Os arquivos `./src/environment/environment.ts` e `./src/environment/environment.prod.ts` são utilizados para configurar algumas variáveis de ambiente que são utilizadas no ambiente de desenvolvimento e no ambiente de produção respectivamente. Ao gerar uma build de produção o Angular substitui o environment.ts pelo environment.prod.ts. Ver mais detalhes em: [Environment Variables in Angular](https://alligator.io/angular/environment-variables/)
 
 ## Vídeo de apoio
 * [Angular Mysql CRUD Tutorial, REST API Node & Typescript](https://www.youtube.com/watch?v=lxYB79ANJM8).
