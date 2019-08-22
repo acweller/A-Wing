@@ -24,15 +24,15 @@ O principal objetivo é o de desenvolver as habilidades de cada um dos estudante
 * Clonar este projeto para a sua máquina via GitKraken;
 * Usar o arquivo `database/db_awing.sql` para criar a base de dados via MySql ou PhpMyAdmin;
 * Abrir um terminal (na pasta do projeto) e instalar os módulos necessários ao servidor:
-  * npm i
-  * cd server
-  * npm i
+  * `npm i`
+  * `cd server`
+  * `npm i`
 
 ## Execução do Projeto
-* Abrir um terminal (na pasta do projeto) e executar comando para iniciar o compilador do TScript (manter ativo esse terminal):
-  * cd server
+* Abrir um terminal (na pasta do projeto) e executar comando para iniciar o compilador do TScript (manter ativo este terminal):
+  * `cd server`
   * `npm run build`
-* Abrir outro terminal (na pasta do projeto) e executar comando para iniciar o cliente em `http://localhost:4200/` e o servidor em `http://localhost:3000/`:
+* Abrir outro terminal (na pasta do projeto) e executar comando para iniciar o cliente em `http://localhost:4200/` e o servidor em `http://localhost:3000/`  (manter ativo este terminal):
   * `npm run serve`
 
 ## Vídeo de apoio
