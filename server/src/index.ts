@@ -37,10 +37,9 @@ class Server {
 
   start(): void{
      this.app.listen(this.app.get('port'), () => {
-         console.log('Server on port', this.app.get('port'));
+         console.log('Servidor iniciado na porta:', this.app.get('port'));
        });
   }
-
 }
 
 const server = new Server();

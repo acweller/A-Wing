@@ -20,21 +20,24 @@ O principal objetivo é o de desenvolver as habilidades de cada um dos estudante
   * [Visual Studio Code](https://code.visualstudio.com/)
 * [Postman](https://www.getpostman.com/postman).
 
-## Execução do Projeto
+## Instalação dos módulos do projeto
 * Clonar este projeto para a sua máquina via GitKraken;
 * Usar o arquivo `database/db_awing.sql` para criar a base de dados via MySql ou PhpMyAdmin;
-* Abrir um terminal, acessar a pasta "Server" e executar este comando para instalar os módulos necessários ao projeto:
+* Abrir um terminal (na pasta do projeto) e instalar os módulos necessários ao servidor:
   * npm i
-* Executar o seguinte comando para iniciar o compilador do TScript (manter ativo):
-  * npm run build
-* Abrir um segundo terminal e iniciar o servidor:
-  * npm run dev
-* Abrir o endereço:
-  * http://localhost:3000/
-  * http://localhost:3000/starshiptype
+  * cd server
+  * npm i
+
+## Execução do Projeto
+* Abrir um terminal (na pasta do projeto) e executar comando para iniciar o compilador do TScript (manter ativo esse terminal):
+  * cd server
+  * `npm run build`
+* Abrir outro terminal (na pasta do projeto) e executar comando para iniciar o cliente em `http://localhost:4200/` e o servidor em `http://localhost:3000/`:
+  * `npm run serve`
 
 ## Vídeo de apoio
 * [Angular Mysql CRUD Tutorial, REST API Node & Typescript](https://www.youtube.com/watch?v=lxYB79ANJM8).
+* [Adding a Node + Typescript Backend to Your Angular App](https://youtu.be/Ad3fj9V7s6A)
 
 ## Dicas
 * [Um modelo de ramificação Git bem-sucedido](https://nvie.com/posts/a-successful-git-branching-model/)
@@ -45,3 +48,19 @@ O principal objetivo é o de desenvolver as habilidades de cada um dos estudante
 * [Marketplace do GitHub - CI](https://github.com/marketplace/category/continuous-integration?before=Y3Vyc29yOjIx)
 * [Travis CI: Instalar no GitHub](https://github.com/marketplace/travis-ci)
 * [Travis CI: Documentação para Javascript/Node](https://docs.travis-ci.com/user/languages/javascript-with-nodejs/)
+* [Continuous Integration with Angular and Travis CI](https://youtu.be/ojr2Dy0Pjhw)
+
+## Informações do Angular CLI
+Siga os passos abaixo para realizar uma BUILD ou executar testes.
+
+### Montar uma Build do projeto
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
+### Running unit tests
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+### Running end-to-end tests
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+### Further help
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
