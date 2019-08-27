@@ -50,6 +50,50 @@ Em ambiente de desenvolvimento podemos executar o `nodemon` das seguintes formas
 
 Obs.: Os arquivos `./src/environment/environment.ts` e `./src/environment/environment.prod.ts` são utilizados para configurar algumas variáveis de ambiente que são utilizadas no ambiente de desenvolvimento e no ambiente de produção respectivamente. Ao gerar uma build de produção o Angular substitui o environment.ts pelo environment.prod.ts. Ver mais detalhes em: [Environment Variables in Angular](https://alligator.io/angular/environment-variables/)
 
+## Implantação em Produção
+
+* Instalar Servidor LAMP
+  $ apt install apache2 php mysql phpmyadmin
+
+* Instalar o NodeJS
+  apt-get install curl
+  Depois seguir os passos em [NodeSource -- NodeJS](https://github.com/nodesource/distributions/blob/master/README.md) para a distribuição GNU/Linux utilizada;
+
+* Instalar PM2 pelo Node
+  Conferir dicas em [Setup NodeJS em Website](https://www.ionos.com/community/server-cloud-infrastructure/nodejs/set-up-a-nodejs-app-for-a-website-with-apache-on-ubuntu-1604/);
+  npm install -g pm2
+
+* Realizar uma Build do front-end
+  ng build --prod
+
+* Fazer upload desse conteúdo para o servidor, depois mover para /var/www/http
+  tar czvf awing.tar.gz dist/A-Wing
+  scp awing.tar.gz USUARIO@172.16.174.48:.
+
+* Enviar os arquivos do back-end para o servidor, depois mover para /var/www/http/server
+  tar --exclude='./server/node_modules' -czvf server.tar.gz ./server
+  scp server.tar.gz USUARIO@172.16.174.48:.
+
+* Instalar as dependências localmente na pasta 'server' (como superusuário)
+  cd /var/www/html/server
+  npm i
+
+* Iniciar o Servidor pelo PM2 (como usuário comum)
+  cd /var/www/html/server
+  NODE_ENV=production pm2 start /var/www/html/server/build/index.js --name awingserver --watch
+  Obs.: Esse comando configura a variável NODE_ENV para indicar que o servidor está em produção; --name informa o nome do serviço iniciado pelo PM2; o --watch indica que o PM2 deve monitorar mudanças nos arquivos e reiniciar o serviço caso algum deles seja alterado (assim não precisamos ficar reiniciando o serviço manualmente).
+
+* Salvar as configurações do PM2 (como usuário comum)
+  pm2 save
+
+* Identificar a comando de configuração da reinicialização do PM2 (como usuário comum)
+  pm2 startup
+
+* Usar o resultado do comando anterior para configurar a reinicialização do PM2 (como superusuário)
+
+
+
+
 ## Vídeo de apoio
 * [Angular Mysql CRUD Tutorial, REST API Node & Typescript](https://www.youtube.com/watch?v=lxYB79ANJM8).
 * [Adding a Node + Typescript Backend to Your Angular App](https://youtu.be/Ad3fj9V7s6A)
