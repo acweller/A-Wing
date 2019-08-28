@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { RouterModule} from '@angular/router'
 import { SquadListComponent } from './squad-list.component';
 
 describe('SquadListComponent', () => {
@@ -8,7 +8,8 @@ describe('SquadListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SquadListComponent ]
+      declarations: [ SquadListComponent ],
+      imports: [RouterModule]
     })
     .compileComponents();
   }));
@@ -19,7 +20,5 @@ describe('SquadListComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+
 });

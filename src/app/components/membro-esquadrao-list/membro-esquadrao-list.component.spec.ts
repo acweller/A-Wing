@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { RouterModule } from "@angular/router";
 import { MembroEsquadraoListComponent } from './membro-esquadrao-list.component';
 
 describe('MembroEsquadraoListComponent', () => {
@@ -8,7 +8,8 @@ describe('MembroEsquadraoListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MembroEsquadraoListComponent ]
+      declarations: [ MembroEsquadraoListComponent ],
+      imports: [RouterModule]
     })
     .compileComponents();
   }));
@@ -19,7 +20,5 @@ describe('MembroEsquadraoListComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+
 });

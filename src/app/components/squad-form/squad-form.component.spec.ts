@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import {FormsModule} from '@angular/forms'
 import { SquadFormComponent } from './squad-form.component';
 
 describe('SquadFormComponent', () => {
@@ -8,7 +8,8 @@ describe('SquadFormComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SquadFormComponent ]
+      declarations: [ SquadFormComponent ],
+      imports: [ FormsModule ]
     })
     .compileComponents();
   }));
@@ -19,7 +20,4 @@ describe('SquadFormComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
 });

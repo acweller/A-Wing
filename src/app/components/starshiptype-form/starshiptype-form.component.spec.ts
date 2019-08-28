@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import {FormsModule} from '@angular/forms'
 import { StarshiptypeFormComponent } from './starshiptype-form.component';
 
 describe('StarshiptypeFormComponent', () => {
@@ -8,7 +8,8 @@ describe('StarshiptypeFormComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ StarshiptypeFormComponent ]
+      declarations: [ StarshiptypeFormComponent ],
+      imports: [FormsModule]
     })
     .compileComponents();
   }));
@@ -19,7 +20,5 @@ describe('StarshiptypeFormComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+
 });
