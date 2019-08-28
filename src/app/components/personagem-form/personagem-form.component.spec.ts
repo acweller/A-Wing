@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import {FormsModule} from '@angular/forms'
 import { PersonagemFormComponent } from './personagem-form.component';
 
 describe('PersonagemFormComponent', () => {
@@ -8,7 +8,8 @@ describe('PersonagemFormComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PersonagemFormComponent ]
+      declarations: [ PersonagemFormComponent ],
+      imports: [ FormsModule ]
     })
     .compileComponents();
   }));
@@ -19,7 +20,4 @@ describe('PersonagemFormComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
 });

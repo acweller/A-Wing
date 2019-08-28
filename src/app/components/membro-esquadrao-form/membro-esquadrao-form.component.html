@@ -3,13 +3,13 @@
     <div class="card-body">
       <form>
         <div class="form-group">
-          <input type="number" name="Codigo Personagem" [(ngModel)]="MembroEsquadrao.cod_personagem" placeholder="Codigo Personagem" class="form-control">
+          <input type="number" name="MembroEsquadrao.cod_personagem" [(ngModel)]="MembroEsquadrao.cod_personagem" placeholder="Codigo Personagem" class="form-control">
         </div>
         <div class="form-group">
-          <input type="number" name="Codigo Esquadrao" placeholder="Codigo Esquadrao" [(ngModel)]="MembroEsquadrao.cod_esquadrao" class="form-control">
+          <input type="number" name="MembroEsquadrao.cod_esquadrao" placeholder="Codigo Esquadrao" [(ngModel)]="MembroEsquadrao.cod_esquadrao" class="form-control">
         </div>
         <div class="form-group">
-          <input type="text" name="Descrição"  placeholder="Descrição" [(ngModel)]="MembroEsquadrao.descricao" rows="2" class="form-control">
+          <input type="text" name="MembroEsquadrao.descricao"  placeholder="Descrição" [(ngModel)]="MembroEsquadrao.descricao" rows="2" class="form-control">
         </div>
         <button class="btn btn-success btn-block" (click)="edit ? updateMembroEsquadrao() : saveMembroEsquadrao()">
           Salvar

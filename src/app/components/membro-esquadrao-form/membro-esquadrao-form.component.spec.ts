@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import {FormsModule} from '@angular/forms';   
 import { MembroEsquadraoFormComponent } from './membro-esquadrao-form.component';
 
 describe('MembroEsquadraoFormComponent', () => {
@@ -8,7 +8,8 @@ describe('MembroEsquadraoFormComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MembroEsquadraoFormComponent ]
+      declarations: [ MembroEsquadraoFormComponent ],
+      imports: [ FormsModule ]
     })
     .compileComponents();
   }));
@@ -19,7 +20,5 @@ describe('MembroEsquadraoFormComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+
 });

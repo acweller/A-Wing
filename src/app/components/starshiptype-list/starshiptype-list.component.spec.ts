@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { RouterModule} from '@angular/router'
 import { StarshiptypeListComponent } from './starshiptype-list.component';
 
 describe('StarshiptypeListComponent', () => {
@@ -8,7 +8,8 @@ describe('StarshiptypeListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ StarshiptypeListComponent ]
+      declarations: [ StarshiptypeListComponent ],
+      imports: [RouterModule]
     })
     .compileComponents();
   }));
@@ -19,7 +20,5 @@ describe('StarshiptypeListComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+
 });
