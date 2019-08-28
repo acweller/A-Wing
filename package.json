@@ -7,6 +7,7 @@
     "build": "ng build",
     "prod": "ng build --prod",
     "test": "ng test",
+    "testc": "CHROME_BIN=/usr/bin/chromium ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "serve": "concurrently \"ng serve\" \"./server/node_modules/.bin/nodemon ./server/build/index.js\""
