@@ -11,6 +11,8 @@
     "experimentalDecorators": true,
     "importHelpers": true,
     "target": "es5",
+    "noEmitOnError": true, /* Não gera JavaScript se houver erro no TypeScript */
+    "noImplicitAny": true, /* Raise error on expressions and declarations with an implied 'any' type. */
     "typeRoots": [
       "node_modules/@types"
     ],
