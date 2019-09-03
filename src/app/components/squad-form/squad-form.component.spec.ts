@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import {FormsModule} from '@angular/forms'
+import {FormsModule} from '@angular/forms';
 import { SquadFormComponent } from './squad-form.component';
 
 describe('SquadFormComponent', () => {

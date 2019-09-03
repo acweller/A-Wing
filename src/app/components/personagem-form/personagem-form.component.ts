@@ -2,7 +2,7 @@ import { PersonagemService } from './../../services/personagem.service';
 import { Personagem } from './../../models/Personagem';
 import { Component, OnInit, HostBinding } from '@angular/core';
 
-import { Router,ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-personagem-form',
@@ -19,9 +19,9 @@ export class PersonagemFormComponent implements OnInit {
     descricao: '',
     imagem: '',
     datahora: new Date()
-  }
+  };
 
-  edit: boolean = false;
+  edit = false;
 
   constructor(private personagemService: PersonagemService, private router: Router, private activatedRoute: ActivatedRoute) { }
 
@@ -36,7 +36,7 @@ export class PersonagemFormComponent implements OnInit {
           this.edit = true;
         },
         err => console.error(err)
-      )
+      );
     }
   }
 
@@ -51,7 +51,7 @@ export class PersonagemFormComponent implements OnInit {
           this.router.navigate(['/personagens']);
         },
         err => console.error(err)
-      )
+      );
   }
 
   updatePersonagem() {
@@ -64,7 +64,7 @@ export class PersonagemFormComponent implements OnInit {
           this.router.navigate(['/personagens']);
         },
         err => console.error(err)
-    )
+    );
   }
 
 }

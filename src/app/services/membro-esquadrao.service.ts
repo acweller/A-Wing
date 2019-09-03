@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { membroEsquadrao } from '../models/membroEsquadrao';
+import { MembroEsquadrao } from '../models/membroEsquadrao';
 import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
 
@@ -13,25 +13,26 @@ export class MembroEsquadraoService {
 
   constructor(private http: HttpClient) { }
 
-  getMembrosEsquadrao(){
+  getMembrosEsquadrao() {
     return this.http.get(`${this.API_URI}/MembroEsquadrao`);
   }
 
-  getMembroEsquadrao(id: String){
+  getMembroEsquadrao(id: string) {
     return this.http.get(`${this.API_URI}/MembroEsquadrao/${id}`);
   }
 
-  deleteMembroEsquadrao(cod_personagem:String, cod_esquadrao:String){
+  deleteMembroEsquadrao(codPersonagem: string, codEsquadrao: string) {
     console.log('deletando membro esq service');
-    return this.http.delete(`${this.API_URI}/MembroEsquadrao/${cod_personagem},${cod_esquadrao}`);
+    return this.http.delete(`${this.API_URI}/MembroEsquadrao/${codPersonagem},${codEsquadrao}`);
   }
 
-  saveMembroEsquadrao(membro: membroEsquadrao){
+  saveMembroEsquadrao(membro: MembroEsquadrao) {
     return this.http.post(`${this.API_URI}/MembroEsquadrao`, membro);
   }
 
-  updateMembroEsquadrao(updateMembroEsquadrao: membroEsquadrao): Observable<membroEsquadrao> {
-    return this.http.put(`${this.API_URI}/MembroEsquadrao/${updateMembroEsquadrao.cod_personagem},${updateMembroEsquadrao.cod_esquadrao}`,updateMembroEsquadrao);
+  updateMembroEsquadrao(updateMembroEsquadrao: MembroEsquadrao): Observable<MembroEsquadrao> {
+    return this.http.put(`${this.API_URI}/MembroEsquadrao/${updateMembroEsquadrao.cod_personagem},
+    ${updateMembroEsquadrao.cod_esquadrao}`, updateMembroEsquadrao);
   }
 
 }

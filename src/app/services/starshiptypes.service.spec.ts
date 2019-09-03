@@ -4,7 +4,7 @@ import { StarshiptypesService } from './starshiptypes.service';
 
 describe('StarshiptypesService', () => {
   beforeEach(() => TestBed.configureTestingModule({
-    imports: [HttpClientTestingModule] 
+    imports: [HttpClientTestingModule]
   }));
 
   it('should be created', () => {

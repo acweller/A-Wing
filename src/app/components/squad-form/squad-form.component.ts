@@ -18,7 +18,7 @@ export class SquadFormComponent implements OnInit {
     datahora: new Date()
   };
 
-  edit: boolean = false;
+  edit = false;
 
   constructor(private squadServices: SquadService, private router: Router, private activedRoute: ActivatedRoute) { }
 
@@ -26,7 +26,7 @@ export class SquadFormComponent implements OnInit {
 
     const params = this.activedRoute.snapshot.params;
     if (params.cod_esquadrao) {
-      console.log(params.cod_esquadrao)
+      console.log(params.cod_esquadrao);
       this.squadServices.getSquad(params.cod_esquadrao)
         .subscribe(
           res => {
@@ -35,12 +35,12 @@ export class SquadFormComponent implements OnInit {
             this.edit = true;
           },
           err => console.log(err)
-        )
+        );
     }
 
   }
 
-  saveNewSquad(){
+  saveNewSquad() {
     delete this.squad.cod_esquadrao;
     delete this.squad.datahora;
     this.squadServices.saveSquad(this.squad)
@@ -50,7 +50,7 @@ export class SquadFormComponent implements OnInit {
           this.router.navigate(['/squad']);
         },
         err => console.log(err)
-      )
+      );
   }
   updateSquad() {
     delete this.squad.datahora;
@@ -61,6 +61,6 @@ export class SquadFormComponent implements OnInit {
           this.router.navigate(['/squad']);
         },
         err => console.error(err)
-      )
+      );
   }
 }

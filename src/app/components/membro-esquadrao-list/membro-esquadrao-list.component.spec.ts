@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { RouterModule } from "@angular/router";
+import { RouterModule } from '@angular/router';
 import { MembroEsquadraoListComponent } from './membro-esquadrao-list.component';
 
 describe('MembroEsquadraoListComponent', () => {

@@ -26,16 +26,16 @@ export class SquadListComponent implements OnInit {
       err => console.error(err)
     );
   }
-  deleteSquad(cod_esquadrao: string) {
-    this.squadService.deleteSquad(cod_esquadrao)
+  deleteSquad(codEsquadrao: string) {
+    this.squadService.deleteSquad(codEsquadrao)
       .subscribe(
         res => {
-          console.log(res)
+          console.log(res);
           this.getSquads();
 
         },
         err => console.error(err)
-      )
+      );
   }
 
   }

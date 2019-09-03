@@ -29,8 +29,8 @@ export class SquadService {
     return this.http.post(`${this.API_URI}/squad`, squad);
   }
 
-  updateSquad(cod_esquadrao: string|number, updateSquad: Squad): Observable<Squad> {
-    return this.http.put(`${this.API_URI}/squad/${cod_esquadrao}`, updateSquad);
+  updateSquad(codEsquadrao: string|number, updateSquad: Squad): Observable<Squad> {
+    return this.http.put(`${this.API_URI}/squad/${codEsquadrao}`, updateSquad);
   }
 
 }
