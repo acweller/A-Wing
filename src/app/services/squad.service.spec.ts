@@ -4,7 +4,7 @@ import { SquadService } from './squad.service';
 
 describe('SquadService', () => {
   beforeEach(() => TestBed.configureTestingModule({
-    imports: [HttpClientTestingModule] 
+    imports: [HttpClientTestingModule]
   }));
 
   it('should be created', () => {

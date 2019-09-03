@@ -5,7 +5,7 @@ import { MembroEsquadraoService } from './membro-esquadrao.service';
 
 describe('MembroEsquadraoService', () => {
   beforeEach(() => TestBed.configureTestingModule({
-    imports: [HttpClientTestingModule] 
+    imports: [HttpClientTestingModule]
   }));
 
   it('should be created', () => {

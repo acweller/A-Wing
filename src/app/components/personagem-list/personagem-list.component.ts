@@ -25,17 +25,17 @@ export class PersonagemListComponent implements OnInit {
         this.personagens = res;
       },
       err => console.error(err)
-    )
+    );
   }
 
-  deletePersonagem(cod_personagem: string) {
-    this.personagemService.deletePersonagem(cod_personagem)
+  deletePersonagem(codPersonagem: string) {
+    this.personagemService.deletePersonagem(codPersonagem)
     .subscribe(
       res => {
-        console.log(res)
+        console.log(res);
         this.getPersonagens();
       },
       err => console.log(err)
-    )
+    );
   }
 }

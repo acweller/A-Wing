@@ -1,8 +1,8 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
-import { ActivatedRoute, Router } from "@angular/router";
+import { ActivatedRoute, Router } from '@angular/router';
 
-import { membroEsquadrao } from '../../models/membroEsquadrao';
-import { MembroEsquadraoService } from '../../services/membro-esquadrao.service'
+import { MembroEsquadrao } from '../../models/membroEsquadrao';
+import { MembroEsquadraoService } from '../../services/membro-esquadrao.service';
 
 @Component({
   selector: 'app-membro-esquadrao-form',
@@ -14,20 +14,20 @@ export class MembroEsquadraoFormComponent implements OnInit {
 
   @HostBinding('class') classes = 'row';
 
-  MembroEsquadrao : membroEsquadrao = {
+  MembroEsquadrao: MembroEsquadrao = {
     cod_personagem: 0,
-    cod_esquadrao : 0,
-    descricao : "",
+    cod_esquadrao: 0,
+    descricao: '',
     datahora: new Date()
-  }
+  };
 
-  edit: boolean = false;
+  edit = false;
 
   constructor(private membroEsquadraoService: MembroEsquadraoService, private router: Router, private activeRoute: ActivatedRoute) { }
 
   ngOnInit() {
     const params  = this.activeRoute.snapshot.params;
-    if (params.id){
+    if (params.id) {
       this.membroEsquadraoService.getMembroEsquadrao(params.id).subscribe(
         res => {
           console.log(res);
@@ -37,33 +37,33 @@ export class MembroEsquadraoFormComponent implements OnInit {
         err => {
           console.log(err);
         }
-      )
+      );
     }
   }
 
-  saveMembroEsquadrao(){
+  saveMembroEsquadrao() {
     delete this.MembroEsquadrao.datahora;
-    //delete this.MembroEsquadrao.cod_esquadrao;
+    // delete this.MembroEsquadrao.cod_esquadrao;
     this.membroEsquadraoService.saveMembroEsquadrao(this.MembroEsquadrao)
     .subscribe(
-      res=>{
+      res => {
         console.log(res);
-        this.router.navigate(['/MembroEsquadrao'])
+        this.router.navigate(['/MembroEsquadrao']);
       },
       err => console.error(err)
-    )
+    );
   }
 
-  updateMembroEsquadrao(){
+  updateMembroEsquadrao() {
     delete this.MembroEsquadrao.datahora;
     this.membroEsquadraoService.updateMembroEsquadrao(this.MembroEsquadrao)
       .subscribe(
         res => {
           console.log(res);
-          this.router.navigate(['/MembroEsquadrao'])
+          this.router.navigate(['/MembroEsquadrao']);
         },
         err => console.log(err)
-      )
+      );
   }
 
 }

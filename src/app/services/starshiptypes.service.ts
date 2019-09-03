@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { starshiptype } from "../models/starshiptype";
+import { StarShipType } from '../models/starshiptype';
 import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
 
@@ -13,23 +13,23 @@ export class StarshiptypesService {
 
   constructor(private http: HttpClient) { }
 
-  getStarshiptypes(){
+  getStarshiptypes() {
     return this.http.get(`${this.API_URI}/starshiptype`);
   }
 
-  getStarshiptype(id: string|number){
+  getStarshiptype(id: string|number) {
     return this.http.get(`${this.API_URI}/starshiptype/${id}`);
   }
 
-  deleteStarshiptype(id: string){
+  deleteStarshiptype(id: string) {
     return this.http.delete(`${this.API_URI}/starshiptype/${id}`);
   }
 
-  saveStarshiptype(type: starshiptype){
+  saveStarshiptype(type: StarShipType) {
     return this.http.post(`${this.API_URI}/starshiptype`, type);
   }
 
-  updateStarshiptype(id: string|number, type: starshiptype): Observable<starshiptype>{
+  updateStarshiptype(id: string|number, type: StarShipType): Observable<StarShipType> {
     return this.http.put(`${this.API_URI}/starshiptype/${id}`, type);
   }
 }

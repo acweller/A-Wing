@@ -4,7 +4,7 @@ import { PersonagemService } from './personagem.service';
 
 describe('PersonagemService', () => {
   beforeEach(() => TestBed.configureTestingModule({
-    imports: [HttpClientTestingModule] 
+    imports: [HttpClientTestingModule]
   }));
 
   it('should be created', () => {

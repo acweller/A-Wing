@@ -1,6 +1,5 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 import { MembroEsquadraoService } from '../../services/membro-esquadrao.service';
-import { membroEsquadrao } from 'src/app/models/membroEsquadrao';
 @Component({
   selector: 'app-membro-esquadrao-list',
   templateUrl: './membro-esquadrao-list.component.html',
@@ -14,17 +13,17 @@ export class MembroEsquadraoListComponent implements OnInit {
   ngOnInit() {
     this.getMembroEsquadrao();
   }
-  getMembroEsquadrao(){
+  getMembroEsquadrao() {
     this.membrosEsquadraoService.getMembrosEsquadrao().subscribe(
       res => {
-        this.membrosEsquadrao= res
+        this.membrosEsquadrao = res;
       },
       err => console.error(err)
-    )
+    );
   }
-  excluirMembroEsquadrao(cod_personagem:string, cod_esquadrao:String){
+  excluirMembroEsquadrao(codPersonagem: string, codEsquadrao: string) {
     console.log('deletando membro esq component');
-    this.membrosEsquadraoService.deleteMembroEsquadrao(cod_personagem,cod_esquadrao).subscribe(
+    this.membrosEsquadraoService.deleteMembroEsquadrao(codPersonagem, codEsquadrao).subscribe(
       res => {
         console.log('OK');
         console.log(res);
@@ -34,7 +33,7 @@ export class MembroEsquadraoListComponent implements OnInit {
         console.log('Erro');
         console.log(err);
       }
-    )
+    );
   }
 
 }

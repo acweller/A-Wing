@@ -17,20 +17,20 @@ export class PersonagemService {
     return this.http.get(`${this.API_URI}/personagens`);
   }
 
-  getUm(cod_personagem: string) {
-    return this.http.get(`${this.API_URI}/personagens/${cod_personagem}`);
+  getUm(codPersonagem: string) {
+    return this.http.get(`${this.API_URI}/personagens/${codPersonagem}`);
   }
 
-  deletePersonagem(cod_personagem: string) {
-    return this.http.delete(`${this.API_URI}/personagens/${cod_personagem}`);
+  deletePersonagem(codPersonagem: string) {
+    return this.http.delete(`${this.API_URI}/personagens/${codPersonagem}`);
   }
 
   savePersonagem(personagem: Personagem) {
     return this.http.post(`${this.API_URI}/personagens`, personagem);
   }
 
-  updatePersonagem(cod_personagem: string|number, updatedPersonagem: Personagem): Observable<Personagem>  {
-    return this.http.put(`${this.API_URI}/personagens/${cod_personagem}`, updatedPersonagem);
+  updatePersonagem(codPersonagem: string|number, updatedPersonagem: Personagem): Observable<Personagem>  {
+    return this.http.put(`${this.API_URI}/personagens/${codPersonagem}`, updatedPersonagem);
   }
 
 }

@@ -1,6 +1,6 @@
-export interface starshiptype{
+export interface StarShipType {
     cod_type?: number;
-    nom_type?: String;
-    descricao?: String;
+    nom_type?: string;
+    descricao?: string;
     datahora?: Date;
 }

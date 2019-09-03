@@ -1,7 +1,7 @@
 
-export interface membroEsquadrao{
+export interface MembroEsquadrao {
     cod_personagem?: number;
     cod_esquadrao?: number;
-    descricao?: String;
+    descricao?: string;
     datahora?: Date;
 }

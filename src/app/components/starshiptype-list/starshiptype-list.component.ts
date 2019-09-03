@@ -1,6 +1,6 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 
-import { StarshiptypesService } from "../../services/starshiptypes.service";
+import { StarshiptypesService } from '../../services/starshiptypes.service';
 
 @Component({
   selector: 'app-starshiptype-list',
@@ -19,23 +19,23 @@ export class StarshiptypeListComponent implements OnInit {
     this.getStarshiptypes();
   }
 
-  getStarshiptypes(){
+  getStarshiptypes() {
     this.starshiptypesService.getStarshiptypes().subscribe(
       res => {
         this.starshiptypes = res;
       },  // Resposta
       err => console.error(err) // error
-    )
+    );
   }
 
-  deleteStarshiptype(id: string){
+  deleteStarshiptype(id: string) {
     this.starshiptypesService.deleteStarshiptype(id).subscribe(
       res => {
         console.log(res);
         this.getStarshiptypes();
       },
       err => console.log(err)
-    )
+    );
   }
 
 }

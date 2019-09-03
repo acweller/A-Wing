@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import {MembroEsquadraoListComponent} from  './components/membro-esquadrao-list/membro-esquadrao-list.component';
-import {MembroEsquadraoFormComponent} from './components/membro-esquadrao-form/membro-esquadrao-form.component'
+import {MembroEsquadraoListComponent} from './components/membro-esquadrao-list/membro-esquadrao-list.component';
+import {MembroEsquadraoFormComponent} from './components/membro-esquadrao-form/membro-esquadrao-form.component';
 import { StarshiptypeListComponent } from './components/starshiptype-list/starshiptype-list.component';
 import { StarshiptypeFormComponent } from './components/starshiptype-form/starshiptype-form.component';
 import { SquadListComponent } from './components/squad-list/squad-list.component';
