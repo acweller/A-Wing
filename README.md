@@ -92,7 +92,10 @@ Obs.: Os arquivos `./src/environment/environment.ts` e `./src/environment/enviro
 * Copiar o texto gerado pelo comando anterior e executá-lo para configurar a reinicialização do PM2 (como superusuário).
 
 ## Vídeo de apoio
-* [Angular Mysql CRUD Tutorial, REST API Node & Typescript](https://www.youtube.com/watch?v=lxYB79ANJM8).
+* [Angular Mysql CRUD Tutorial, REST API Node & Typescript](https://www.youtube.com/watch?v=lxYB79ANJM8)
+  * [Github - FaztWeb/angular7-mysql-crud](https://github.com/FaztWeb/angular7-mysql-crud)
+* [Nodejs y Mysql, Aplicación Completa (Login, Registro, CRUD, ES6+ y Más)](https://youtu.be/qJ5R9WTW0_E)
+  * [Github - FaztTech/nodejs-mysql-links](https://github.com/FaztTech/nodejs-mysql-links)
 * [Adding a Node + Typescript Backend to Your Angular App](https://youtu.be/Ad3fj9V7s6A)
 
 ## Dicas
