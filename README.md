@@ -10,15 +10,15 @@ Este projeto se prepõe a servir de base para que os participantes do LEDS Santa
 O principal objetivo é o de desenvolver as habilidades de cada um dos estudantes no desenvolvimento colaborativo de um Sistema Web.
 
 ## Ferramentas
-* [Angular](https://angular.io/guide/quickstart);
-* [Node.js](https://nodejs.org/en/) (Módulos: express, morgan, promise-mysql, cors);
-* MySql para o banco de dados;
-* PhpMyAdmin para gerenciar o BD (Crie o usuário phpmyadmin, com senha phpmyadmin);
-* [GitKraken](https://www.gitkraken.com/): Para controle de versão via Git;
+* [Node.js](https://nodejs.org/en/) -- [Install Version 12](https://github.com/nodesource/distributions) (Módulos: express, morgan, promise-mysql, cors);
+* [Angular](https://angular.io/guide/quickstart) -- [Install the Angular CLI](https://angular.io/guide/setup-local);
+* MySql para o banco de dados ([Importar BD](https://www.digitalocean.com/community/tutorials/how-to-import-and-export-databases-in-mysql-or-mariadb) -- [Dar privilégios a usuário](https://chartio.com/resources/tutorials/how-to-grant-all-privileges-on-a-database-in-mysql/));
+* PhpMyAdmin para gerenciar o BD (Crie o usuário phpmyadmin, com senha phpmyadmin e [dê privilégios de acesso ao BD](https://chartio.com/resources/tutorials/how-to-grant-all-privileges-on-a-database-in-mysql/));
+* [GitKraken](https://www.gitkraken.com/): Para controle de versão via Git (com interface visual);
 * Editores sugeridos para o projeto:
-  * [Atom](https://atom.io/)
   * [Visual Studio Code](https://code.visualstudio.com/)
-* [Postman](https://www.getpostman.com/postman).
+  * [Atom](https://atom.io/)
+* [Postman](https://www.getpostman.com/postman) para testes da API REST.
 
 ## Instalação dos módulos do projeto
 * Clonar este projeto para a sua máquina via GitKraken;
